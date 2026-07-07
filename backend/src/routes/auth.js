@@ -3,13 +3,6 @@ import { products } from "../../data.js";
 
 const router = Router();
 
-/*
-1. Search via name Done
-2, Filter by Categories
-3. Filter by availibilty
-4. Filter by price range
-*/
-
 router.get("/products", (req, res) => {
   const { page, limit, name } = req.query;
 
@@ -37,6 +30,27 @@ router.get("/products", (req, res) => {
   res
     .status(200)
     .json({ data: { products: data, pagination: paginationData } });
+});
+
+router.post("/products", (req, res) => {
+  try {
+    const { name, price, isAvailable, category } = req.body;
+
+    const newProduct = {
+      name: name.trim(),
+      price,
+      isAvailable,
+      category: category.trim(),
+      id: products.length + 1,
+    };
+
+    products.push(newProduct);
+
+    return res.status(201).json({ message: "Data hogya", data: products });
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json({ message: "Something went wrong!" });
+  }
 });
 
 export { router as authRoutes };

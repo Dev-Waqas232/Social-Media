@@ -4,6 +4,8 @@ import { authRoutes } from "./src/routes/auth.js";
 
 const app = express();
 
+app.use(express.json());
+
 app.use(authRoutes);
 
 app.listen(3000, () => {
