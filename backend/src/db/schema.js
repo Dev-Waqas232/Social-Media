@@ -9,7 +9,7 @@ import {
 
 export const genderEnum = pgEnum("user_gender", ["male", "female"]);
 
-export const users = pgTable("users", {
+export const usersTable = pgTable("users", {
   id: uuid("id").primaryKey().defaultRandom(),
   firstName: text("first_name").notNull(),
   lastName: text("last_name").notNull(),
