@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+/* Light mode */
+:root {
+  color-scheme: light;
+
+  /* Brand */
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-soft: #eef2ff;
+
+  --secondary: #7c3aed;
+  --secondary-hover: #6d28d9;
+  --secondary-soft: #f5f3ff;
+
+  /* CTA */
+  --cta: #4f46e5;
+  --cta-hover: #4338ca;
+  --cta-text: #ffffff;
+
+  /* Backgrounds & surfaces */
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-hover: #f1f5f9;
+
+  /* Text */
+  --text: #0f172a;
+  --text-muted: #64748b;
+
+  /* Borders */
+  --border: #e2e8f0;
+
+  /* Status */
+  --success: #16a34a;
+  --success-soft: #dcfce7;
+
+  --error: #dc2626;
+  --error-soft: #fee2e2;
+
+  --warning: #d97706;
+  --warning-soft: #fef3c7;
+
+  --info: #0284c7;
+  --info-soft: #e0f2fe;
+}
+
+/* Dark mode */
+.dark {
+  color-scheme: dark;
+
+  /* Brand */
+  --primary: #818cf8;
+  --primary-hover: #a5b4fc;
+  --primary-soft: #252653;
+
+  --secondary: #a78bfa;
+  --secondary-hover: #c4b5fd;
+  --secondary-soft: #30204f;
+
+  /* CTA */
+  --cta: #6366f1;
+  --cta-hover: #818cf8;
+  --cta-text: #ffffff;
+
+  /* Backgrounds & surfaces */
+  --bg: #0b0f19;
+  --surface: #151b2b;
+  --surface-hover: #20283a;
+
+  /* Text */
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+
+  /* Borders */
+  --border: #293347;
+
+  /* Status */
+  --success: #4ade80;
+  --success-soft: #163a2a;
+
+  --error: #f87171;
+  --error-soft: #451e27;
+
+  --warning: #fbbf24;
+  --warning-soft: #44321b;
+
+  --info: #38bdf8;
+  --info-soft: #15354a;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-soft: var(--primary-soft);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-soft: var(--secondary-soft);
+
+  --color-cta: var(--cta);
+  --color-cta-hover: var(--cta-hover);
+  --color-cta-text: var(--cta-text);
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+
+  --color-border: var(--border);
+
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+
+  --color-error: var(--error);
+  --color-error-soft: var(--error-soft);
+
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+
+  --font-body: "Manrope", sans-serif;
+  --font-heading: "DM Sans", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}

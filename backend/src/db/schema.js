@@ -1,11 +1,4 @@
-import {
-  numeric,
-  pgEnum,
-  pgTable,
-  serial,
-  text,
-  uuid,
-} from "drizzle-orm/pg-core";
+import { numeric, pgEnum, pgTable, text, uuid } from "drizzle-orm/pg-core";
 
 export const genderEnum = pgEnum("user_gender", ["male", "female"]);
 
