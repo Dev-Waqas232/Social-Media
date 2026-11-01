@@ -28,7 +28,7 @@ export default function RegisterForm() {
 
   return (
     <form
-      className="bg-surface py-8 px-8 w-xl rounded-md"
+      className="py-8 px-8 w-xl rounded-md flex-1"
       onSubmit={handleSubmit(handleSubmitForm)}
     >
       <div className="flex flex-col gap-1 mb-4">

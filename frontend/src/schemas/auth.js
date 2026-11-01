@@ -10,3 +10,8 @@ export const registerSchema = z.object({
   gender: z.enum(["male", "female", "others"], "Please choose an option"),
   password: z.string().min(8, "Password should contain at least 8 characters"),
 });
+
+export const loginSchema = z.object({
+  email: z.email("Please enter a valid email address"),
+  password: z.string().min(8, "Password should contain at least 8 characters"),
+});
